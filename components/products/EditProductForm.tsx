@@ -24,7 +24,7 @@ export default function EditProductForm({children}:{children:React.ReactNode}){
             console.log(state.success)
             router.push('/admin/products')
         }
-    },[state])
+    },[state,router])
     
 
     return(

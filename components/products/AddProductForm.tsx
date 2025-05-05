@@ -21,7 +21,7 @@ export default function AddProductForm({children}:{children:React.ReactNode}){
             console.log(state.success)
             router.push('/admin/products')
         }
-    },[state])
+    },[state,router])
 
     return(
         <form className="space-y-5"

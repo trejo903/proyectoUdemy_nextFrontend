@@ -7,7 +7,8 @@ export default function CouponForm() {
     const handleSubmit=async(e: FormEvent<HTMLFormElement>)=>{
         e.preventDefault()
         const formData = new FormData(e.currentTarget)
-        const couponName = formData.get('coupon_name')?.toString()!
+        const couponNameRaw = formData.get('coupon_name')
+        const couponName = typeof couponNameRaw === 'string' ? couponNameRaw :'';
         if(!couponName.length) return
         await applyCoupon(couponName)
     }
@@ -33,7 +34,7 @@ export default function CouponForm() {
             </form>
             {coupon.message?(
                 <p className="py-4 text-center text-sm font-bold">{coupon.message}</p>
-            ):null}
+            ):<p>No hay cupon</p>}
       </>
     )
   }
