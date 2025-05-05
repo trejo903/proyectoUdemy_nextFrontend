@@ -1,7 +1,6 @@
 import { submitOrder } from "@/actions/submit-order-action"
 import { useActionState, useEffect } from "react"
 import { useStore } from "@/src/store"
-import { toast } from "react-toastify"
 
 export default function SubmitOrderForm(){
     const total = useStore(state=>state.total)

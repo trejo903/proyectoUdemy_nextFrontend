@@ -3,7 +3,6 @@
 import { addProduct } from "@/actions/add-product-action"
 import { useRouter } from "next/navigation"
 import { useActionState, useEffect } from "react"
-import { toast } from "react-toastify"
 
 export default function AddProductForm({children}:{children:React.ReactNode}){
 

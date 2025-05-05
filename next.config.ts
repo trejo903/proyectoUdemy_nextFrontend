@@ -6,11 +6,7 @@ const nextConfig: NextConfig = {
     remotePatterns:[
       {
         protocol:'http',
-        hostname:process.env.DOMAIN!
-      },
-      {
-        protocol:'http',
-        hostname:process.env.DOMAIN!
+        hostname:'proyectoudemy-nestbackend.onrender.com'
       },
       {
         protocol:'https',
